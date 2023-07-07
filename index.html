@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dunky.Shoes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Styles pour le header */
+    header {
+      background-image: url("../img/headerneon");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Styles pour les boutons */
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      padding: 8px 16px;
+      text-decoration: none;
+      background-color: #fff;
+      color: #e60023;
+      border-radius: 50px;
+      border: 2px solid #e60023;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Animation au survol des boutons */
+    .nav-button:hover {
+      background-color: #e60023;
+      color: #fff;
+    }
+
+    /* Styles pour les icônes */
+    .nav-button i {
+      margin-right: 5px;
+    }
+
+    /* Styles pour le bouton Contact */
+    .nav-button.contact {
+      transition: transform 0.3s ease;
+    }
+
+    /* Animation lors du clic sur le bouton Contact */
+    .nav-button.contact.clicked {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="nav-button"><i class="fas fa-home"></i>Accueil</a>
+    <a href="contact.html" class="nav-button contact"><i class="fas fa-envelope"></i>Contact</a>
+    <a href="article.html" class="nav-button"><i class="fas fa-newspaper"></i>Article</a>
+  </header>
+  <!-- Le reste du contenu de votre site web -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    // JavaScript pour ajouter une classe lors du clic sur le bouton Contact
+    var contactButton = document.querySelector('.nav-button.contact');
+    contactButton.addEventListener('click', function() {
+      contactButton.classList.add('clicked');
+    });
+  </script>
+</body>
+</html>
